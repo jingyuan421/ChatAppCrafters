@@ -1,0 +1,40 @@
+<div class="container">
+  <app-header></app-header>
+  <main>
+    
+    
+    <div class="row">
+      <div class="col">
+        
+        <div class="col"><app-username (saveUsernameEvent)="username = $event"></app-username>
+        <h3 *ngIf="!username">Welcome to the HSG Chat Application! Please choose a nickname. </h3>
+        <h3 *ngIf="username">Welcome, {{ username }}!</h3>
+        </div>
+      </div>
+    </div>
+        <div class="row">
+          <div class="col">
+            <!--<app-chat-history [history]="messageHistory" [messageList]="messages"></app-chat-history> -->
+            <app-chat-history [messageList]="messages"></app-chat-history>
+
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <!--<app-chat-bar (submitMessage)="messageSubmitted($event)"></app-chat-bar> -->
+            <app-chat-bar [username]="username" (submitMessage)="sendMessage($event)"></app-chat-bar>
+          </div>
+        </div>
+
+  </main>
+  <app-footer></app-footer>
+</div>
+
+
+<!--<div class="container">
+  <app-username (saveUsernameEvent)="username = $event"></app-username>
+  <h1>Welcome, {{ username }}!</h1>
+  <app-chat-history [messageList]="messages"></app-chat-history>
+  <app-chat-bar [username]="username" (submitMessage)="sendMessage($event)"></app-chat-bar>
+</div> -->

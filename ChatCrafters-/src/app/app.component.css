@@ -1,0 +1,12 @@
+main {
+    min-height: 600px;
+}
+
+main h1,
+p {
+    color: var(--main-font-color);
+}
+
+/* use talks=smexp to implement changes in all cmps
+wenn man property bindet [chatHistory]="hallo" dann muss die variable exidtieren or else setze in quotes 
+text und variable miteinander verbinden backquotes`dollarsignbannane: string literals*/

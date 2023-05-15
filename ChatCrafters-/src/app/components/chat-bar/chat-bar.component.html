@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="chat-wrapper">
+        <textarea class="form-control" rows="2" type="text" placeholder="   Hier eingeben..." [(ngModel)]="chatMessage"
+            (keyup.enter)="addMessage(chatMessage)"></textarea>
+        <button class="btn btn-primary" [disabled]="!chatMessage.trim() || !username" (click)="addMessage(chatMessage)">
+            <img src="assets/images/Screen_Shot_2023-04-29_at_6.30.37_PM-removebg-preview.png" alt="logo der hsg-chat-app" />
+        </button>
+    </div>
+    <!--<div *ngIf="errorMessage" class="alert alert-warning">{{ errorMessage }}</div> -->
+    <div *ngIf="errorMessage" class="alert">{{ errorMessage }}</div>
+
+</div>
+
+
+<!--
+<div class="chat-bar">
+    <input [(ngModel)]="chatMessage" placeholder="Type your message...">
+    <button (click)="addMessage(chatMessage)">Send</button>
+</div>
+-->
+
+
+
+

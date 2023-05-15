@@ -1,0 +1,16 @@
+
+
+
+<div class="chat-history" #chatHistory>
+  <div class="message-date">
+    <div *ngFor="let message of messageList; let i = index">
+      <div *ngIf="showDate(i)" class="message-bubble-timestamp"><strong>{{ message.timestamp | date : 'dd.MM.yyyy'
+          }}</strong></div>
+    </div>
+  </div>
+  <div *ngFor="let message of messageList; let i = index" class="message-bubble">
+    <div class="message-bubble-text">{{ message.timestamp | date : 'HH:mm' }} - <strong>{{message.username}}</strong>:
+      {{ message.text }}</div>
+
+  </div>
+</div>
