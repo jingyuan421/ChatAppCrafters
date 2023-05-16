@@ -1,16 +1,17 @@
-
-
-
-<div class="chat-history" #chatHistory>
-  <div class="message-date">
-    <div *ngFor="let message of messageList; let i = index">
-      <div *ngIf="showDate(i)" class="message-bubble-timestamp"><strong>{{ message.timestamp | date : 'dd.MM.yyyy'
-          }}</strong></div>
-    </div>
-  </div>
-  <div *ngFor="let message of messageList; let i = index" class="message-bubble">
-    <div class="message-bubble-text">{{ message.timestamp | date : 'HH:mm' }} - <strong>{{message.username}}</strong>:
-      {{ message.text }}</div>
-
+<h2>Chat-History</h2>
+<div class="form-control" #scrollFrame>
+  <div *ngFor="let chatMessage of chatMessages" class="chat-message" [ngClass]="{
+      me: isItMe(chatMessage.username),
+      other: !isItMe(chatMessage.username)
+    }">
+    <p>
+      <span>{{ chatMessage.username }}</span>
+      <small>({{ chatMessage.createdAt | date : "dd.MM.yyyy HH:mm" }})</small>
+    </p>
+    <p [innerHTML]="chatMessage.message"></p>
   </div>
 </div>
+<div *ngIf="errorMessage" class="alert alert-warning">{{ errorMessage }}</div>
+
+
+

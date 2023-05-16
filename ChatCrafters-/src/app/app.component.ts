@@ -7,16 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'ChatAppStep';
-  public messageHistory = '';
-  public username: string = '';
-  public messages: { timestamp: string, username: string,  text: string }[] = [];
+  public username = '';
 
-  public messageSubmitted(message: string): void {
-    this.messageHistory += message;
-  }
-
-  public sendMessage(message: string): void {   
-    this.messages.push({ timestamp: new Date().toISOString(), username: this.username, text: message });
-  }
-  
+  // public nicknameCreated(nickname: string): void {
+  //   this.nickname = nickname;
+  // }
 }
+
