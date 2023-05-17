@@ -14,6 +14,7 @@ export class ChatBarComponent implements OnDestroy {
   public chatMessage = '';
   public errorMessage = '';
   public buttonSaving = false;
+  public soundPath = 'assets/images/tennis_ball_sound.m4a';
 
   private destroyed = new Subject<void>();
 
@@ -62,6 +63,10 @@ export class ChatBarComponent implements OnDestroy {
           // log to log-server
         },
       });
+  }
+  public playSound(): void {
+    const audio = new Audio(this.soundPath);
+    audio.play();
   }
 }
 

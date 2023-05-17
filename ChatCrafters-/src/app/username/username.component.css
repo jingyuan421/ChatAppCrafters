@@ -14,9 +14,9 @@ textarea {
     font-size: 16px;
     font-family: 'Helvetica Neue', sans-serif;
     padding: 10px;
-    border: 2px solid #00802F;
+    border: 2px solid rgba(6, 87, 174, 0.861);
     border-radius: 40px;
-    width: 200px;
+    width: 250px;
     height: 30px;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -31,13 +31,12 @@ textarea {
 
 textarea:hover {
     background-color: #F5F5F5;
-    border: 2px solid #00802F;
+    border: 2px solid rgba(6, 87, 174, 0.861);
     font-size: 16px;
     font-family: 'Helvetica Neue', sans-serif;
     padding: 10px;
-    border: 2px solid #00802F;
     border-radius: 40px;
-    width: 200px;
+    width: 250px;
     height: 30px;
     margin-top: 30px;
     line-height: 10px;
@@ -52,9 +51,9 @@ textarea:focus {
     font-size: 16px;
     font-family: 'Helvetica Neue', sans-serif;
     padding: 10px;
-    border: 2px solid #00802F;
+    border: 2px solid rgba(6, 87, 174, 0.861);
     border-radius: 40px;
-    width: 200px;
+    width: 250px;
     height: 30px;
     margin-top: 30px;
     line-height: 10px;
@@ -66,7 +65,7 @@ button {
     padding: 10px 20px;
     margin-left: 10px;
     margin-top: 12px;
-    background-color: green;
+    background-color: rgba(6, 87, 174, 0.861);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -84,7 +83,7 @@ button:hover {
     padding: 10px 20px;
     margin-left: 10px;
     margin-top: 12px;
-    background-color: green;
+    background-color: rgba(6, 87, 174, 0.861);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
@@ -108,7 +107,7 @@ button:hover {
   }
 
 .saved-message {
-    background-color: green;
+    background-color: rgba(6, 87, 174, 0.861);
     color: white;
     padding: 5px;
     margin-top: 30px;

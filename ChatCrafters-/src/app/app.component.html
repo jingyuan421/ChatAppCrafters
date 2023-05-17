@@ -6,8 +6,8 @@
       <div class="col">
         <div class="col">
           <app-username (saveUsernameEvent)="username = $event"></app-username>
-          <h3 *ngIf="!username">Welcome to the HSG Chat Application! Please choose a nickname. </h3>
-          <h3 *ngIf="username">Welcome, {{ username }}!</h3>
+          <h3 *ngIf="!username">Willkommen zu deinem Tennis Club Chat! Wähle bitte einen Benutzernamen. </h3>
+          <h3 *ngIf="username">{{ username }}, du bist auf dem Spielfeld!</h3>
         </div>
       </div>
     </div>

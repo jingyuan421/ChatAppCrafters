@@ -1,5 +1,5 @@
-<h2>Chat-History</h2>
-<div class="form-control" #scrollFrame>
+
+<div class="form-control custom-background" #scrollFrame>
   <div *ngFor="let chatMessage of chatMessages" class="chat-message" [ngClass]="{
       me: isItMe(chatMessage.username),
       other: !isItMe(chatMessage.username)

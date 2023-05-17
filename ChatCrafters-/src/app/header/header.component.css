@@ -1,16 +1,28 @@
 header img {
-    width: 500px;
+    width: 120px;
+    margin-top: 20px;
     align-items: center;
+    margin-left: 80px;
 }
 
 header {
-    background-color: #e5e5e5;
+    background-color: white;
     height: 150px;
-    border-bottom: 5px solid green;
+    border-bottom: 5px solid rgba(6, 87, 174, 0.861);
     width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.right-link {
+    
+    
+    
+  }
+
 
 
 

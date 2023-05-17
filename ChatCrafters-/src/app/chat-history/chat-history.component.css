@@ -1,9 +1,11 @@
 .form-control {
-  min-height: 150px;
-  max-height: 150px;
+  min-height: 250px;
+  max-height: 250px;
   overflow: auto;
   display: flex;
   flex-direction: column;
+  width: 150%;
+  
 }
 
 .form-control+.alert {
@@ -11,22 +13,23 @@
 }
 
 .chat-message {
-  border: 1px solid silver;
+  border: 2px solid rgba(6, 87, 174, 0.861);
   display: block;
   height: fit-content;
   padding: 5px;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
   width: fit-content;
 }
 
 .chat-message.me {
-  background-color: aliceblue;
+  background-color: white;
+  border: 2px solid  rgba(0, 128, 0, 0.634);
   align-self: flex-end;
 }
 
 .chat-message.other {
-  background-color: aquamarine;
+  background-color: white;
 }
 
 .chat-message p:first-child {
@@ -40,4 +43,10 @@
 .chat-message p:first-child small {
   font-size: 0.75rem;
   margin-left: 10px;
+}
+
+.custom-background {
+  background-image: url('https://www.allabouttennis.co.uk/wp-content/uploads/2021/05/featured-image.jpg');
+  background-size: cover;
+  background-position: center;
 }
