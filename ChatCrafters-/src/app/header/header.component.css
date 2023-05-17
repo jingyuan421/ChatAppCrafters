@@ -1,8 +1,8 @@
 header img {
-    width: 120px;
+    width: 100px;
     margin-top: 20px;
     align-items: center;
-    margin-left: 80px;
+    margin-left: 600px;
 }
 
 header {
@@ -13,16 +13,25 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.right-link {
+.link-bar {
+    display: flex;
     
-    
-    
-  }
+}
 
+.link-bar a {
+    margin-right: 15px; 
+    margin-top: 100px;
+    color: green; 
+    font-weight: bold;
+}
+
+.right-link {
+    margin-left: 10px; 
+}
 
 
 
