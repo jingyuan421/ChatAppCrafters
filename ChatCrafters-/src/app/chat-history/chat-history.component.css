@@ -23,13 +23,13 @@
 }
 
 .chat-message.me {
-  background-color: white;
-  border: 2px solid  rgba(0, 128, 0, 0.634);
+  background-color: rgb(2, 204, 2);
+  border: 2px solid  green;
   align-self: flex-end;
 }
 
 .chat-message.other {
-  background-color: white;
+  background-color: rgb(200, 200, 200);
 }
 
 .chat-message p:first-child {

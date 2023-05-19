@@ -26,7 +26,7 @@ export class UsernameComponent {
         }
         this.errorMessage = ''; // clear error message
       } else {
-        this.errorMessage = 'Please enter only letters and numbers!';
+        this.errorMessage = 'Bitte geben Sie nur Buchstaben und Zahlen ein!';
       }
     }
   }

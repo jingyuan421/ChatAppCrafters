@@ -117,9 +117,12 @@ button:hover {
 }
 
 .error-message {
-    color: green;
-    font-weight: bold;
+    background-color: rgba(0, 128, 0);
+    color: white;
     margin-left: 50px;
-    margin-top: 20px
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-weight: normal;
+    border-radius: 4px;
 }
 

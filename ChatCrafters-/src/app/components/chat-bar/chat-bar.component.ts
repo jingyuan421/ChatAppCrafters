@@ -27,14 +27,14 @@ export class ChatBarComponent implements OnDestroy {
 
   public addMessage(message: string): void {
     if (!message.trim()) {
-      this.errorMessage = 'Please add text!';
+      this.errorMessage = 'Gebe bitte Text ein!';
       this.chatMessage = '';
 
       return;
     }
 
     if (!this.username) {
-      this.errorMessage = 'Please provide a username!';
+      this.errorMessage = 'Bitte erstelle zuerst einen Benutzernamen !';
       this.chatMessage = '';
 
       return;
