@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { ChatService } from '../shared/services/chat.service';
 
 @Component({
   selector: 'app-username',
@@ -9,6 +10,8 @@ export class UsernameComponent {
   public username: string = '';
   public usernameSaved: boolean = false;
   public errorMessage: string = '';
+
+  constructor(private chatService: ChatService) { }
 
   @Output() saveUsernameEvent = new EventEmitter<any>();
 
@@ -21,10 +24,19 @@ export class UsernameComponent {
           this.usernameSaved = false;
           this.saveUsernameEvent.emit(null); // emit a logout event
         } else {
-          this.usernameSaved = true;
-          this.saveUsernameEvent.emit(this.username);
+          this.chatService
+          .checkUsername(this.username)
+          .subscribe({
+            next: (res) => {
+              this.errorMessage = '';
+              this.usernameSaved = true;
+              this.saveUsernameEvent.emit(this.username);
+            },
+            error: (error: Error) => {
+              this.errorMessage = 'Bitte geben Sie einen anderen Benutzernamen ein!';
+            },
+          });
         }
-        this.errorMessage = ''; // clear error message
       } else {
         this.errorMessage = 'Bitte geben Sie nur Buchstaben und Zahlen ein!';
       }

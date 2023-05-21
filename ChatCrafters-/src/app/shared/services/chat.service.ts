@@ -21,5 +21,12 @@ export class ChatService {
       message
     );
   }
+
+  public checkUsername(username: String) {
+    return this.httpClient.post(
+      `${this.baseUrl}usernames`,
+      {username}
+    );
+  }
 }
 
