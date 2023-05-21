@@ -23,7 +23,7 @@
 }
 
 .chat-message.me {
-  background-color: rgb(2, 204, 2);
+  background-color: rgb(200, 200, 200);
   border: 2px solid  green;
   align-self: flex-end;
 }
